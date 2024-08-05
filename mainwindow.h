@@ -45,10 +45,6 @@ private slots:
 
     void on_selectRoute_clicked();
 
-    void on_deleteFile_clicked();
-
-    void on_activateTimer_2_clicked();
-
     void on_activateDirTimer_clicked();
 
 private:
