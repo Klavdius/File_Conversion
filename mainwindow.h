@@ -31,6 +31,9 @@ private slots:
     void SetWorkDir(QString workDir);
     void SetFileName(QString name);
     void ReadFile(QString path);
+    void SavePathTargetFile(QString path);
+    QString GetPathFile();
+    void CheckNeedDeleteFile();
     void SetData(QByteArray data);
     void SetRouteSavedFile(QString dir);
     void ChangingData();
@@ -52,6 +55,7 @@ private:
 
     QString workDir;
     QString fileName;
+    QString pathTargetFile;
     QByteArray inputData;
     QString routeDir;
     QTimer *tmr;

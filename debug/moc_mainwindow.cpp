@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[21];
-    char stringdata0[264];
+    QByteArrayData data[24];
+    char stringdata0[315];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -38,25 +38,30 @@ QT_MOC_LITERAL(5, 51, 11), // "SetFileName"
 QT_MOC_LITERAL(6, 63, 4), // "name"
 QT_MOC_LITERAL(7, 68, 8), // "ReadFile"
 QT_MOC_LITERAL(8, 77, 4), // "path"
-QT_MOC_LITERAL(9, 82, 7), // "SetData"
-QT_MOC_LITERAL(10, 90, 4), // "data"
-QT_MOC_LITERAL(11, 95, 17), // "SetRouteSavedFile"
-QT_MOC_LITERAL(12, 113, 3), // "dir"
-QT_MOC_LITERAL(13, 117, 12), // "ChangingData"
-QT_MOC_LITERAL(14, 130, 9), // "WriteData"
-QT_MOC_LITERAL(15, 140, 15), // "ObserverWorkDir"
-QT_MOC_LITERAL(16, 156, 8), // "FindName"
-QT_MOC_LITERAL(17, 165, 24), // "on_activateTimer_clicked"
-QT_MOC_LITERAL(18, 190, 22), // "on_singleStart_clicked"
-QT_MOC_LITERAL(19, 213, 22), // "on_selectRoute_clicked"
-QT_MOC_LITERAL(20, 236, 27) // "on_activateDirTimer_clicked"
+QT_MOC_LITERAL(9, 82, 18), // "SavePathTargetFile"
+QT_MOC_LITERAL(10, 101, 11), // "GetPathFile"
+QT_MOC_LITERAL(11, 113, 19), // "CheckNeedDeleteFile"
+QT_MOC_LITERAL(12, 133, 7), // "SetData"
+QT_MOC_LITERAL(13, 141, 4), // "data"
+QT_MOC_LITERAL(14, 146, 17), // "SetRouteSavedFile"
+QT_MOC_LITERAL(15, 164, 3), // "dir"
+QT_MOC_LITERAL(16, 168, 12), // "ChangingData"
+QT_MOC_LITERAL(17, 181, 9), // "WriteData"
+QT_MOC_LITERAL(18, 191, 15), // "ObserverWorkDir"
+QT_MOC_LITERAL(19, 207, 8), // "FindName"
+QT_MOC_LITERAL(20, 216, 24), // "on_activateTimer_clicked"
+QT_MOC_LITERAL(21, 241, 22), // "on_singleStart_clicked"
+QT_MOC_LITERAL(22, 264, 22), // "on_selectRoute_clicked"
+QT_MOC_LITERAL(23, 287, 27) // "on_activateDirTimer_clicked"
 
     },
     "MainWindow\0on_loadFile_clicked\0\0"
     "SetWorkDir\0workDir\0SetFileName\0name\0"
-    "ReadFile\0path\0SetData\0data\0SetRouteSavedFile\0"
-    "dir\0ChangingData\0WriteData\0ObserverWorkDir\0"
-    "FindName\0on_activateTimer_clicked\0"
+    "ReadFile\0path\0SavePathTargetFile\0"
+    "GetPathFile\0CheckNeedDeleteFile\0SetData\0"
+    "data\0SetRouteSavedFile\0dir\0ChangingData\0"
+    "WriteData\0ObserverWorkDir\0FindName\0"
+    "on_activateTimer_clicked\0"
     "on_singleStart_clicked\0on_selectRoute_clicked\0"
     "on_activateDirTimer_clicked"
 };
@@ -68,7 +73,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      17,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -76,30 +81,36 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   84,    2, 0x08 /* Private */,
-       3,    1,   85,    2, 0x08 /* Private */,
-       5,    1,   88,    2, 0x08 /* Private */,
-       7,    1,   91,    2, 0x08 /* Private */,
-       9,    1,   94,    2, 0x08 /* Private */,
-      11,    1,   97,    2, 0x08 /* Private */,
-      13,    0,  100,    2, 0x08 /* Private */,
-      14,    1,  101,    2, 0x08 /* Private */,
-      15,    0,  104,    2, 0x08 /* Private */,
-      16,    0,  105,    2, 0x08 /* Private */,
-      17,    0,  106,    2, 0x08 /* Private */,
-      18,    0,  107,    2, 0x08 /* Private */,
-      19,    0,  108,    2, 0x08 /* Private */,
-      20,    0,  109,    2, 0x08 /* Private */,
+       1,    0,   99,    2, 0x08 /* Private */,
+       3,    1,  100,    2, 0x08 /* Private */,
+       5,    1,  103,    2, 0x08 /* Private */,
+       7,    1,  106,    2, 0x08 /* Private */,
+       9,    1,  109,    2, 0x08 /* Private */,
+      10,    0,  112,    2, 0x08 /* Private */,
+      11,    0,  113,    2, 0x08 /* Private */,
+      12,    1,  114,    2, 0x08 /* Private */,
+      14,    1,  117,    2, 0x08 /* Private */,
+      16,    0,  120,    2, 0x08 /* Private */,
+      17,    1,  121,    2, 0x08 /* Private */,
+      18,    0,  124,    2, 0x08 /* Private */,
+      19,    0,  125,    2, 0x08 /* Private */,
+      20,    0,  126,    2, 0x08 /* Private */,
+      21,    0,  127,    2, 0x08 /* Private */,
+      22,    0,  128,    2, 0x08 /* Private */,
+      23,    0,  129,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    4,
     QMetaType::Void, QMetaType::QString,    6,
     QMetaType::Void, QMetaType::QString,    8,
-    QMetaType::Void, QMetaType::QByteArray,   10,
-    QMetaType::Void, QMetaType::QString,   12,
+    QMetaType::Void, QMetaType::QString,    8,
+    QMetaType::QString,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QByteArray,   10,
+    QMetaType::Void, QMetaType::QByteArray,   13,
+    QMetaType::Void, QMetaType::QString,   15,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QByteArray,   13,
     QMetaType::Void,
     QMetaType::QString,
     QMetaType::Void,
@@ -120,17 +131,21 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 1: _t->SetWorkDir((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 2: _t->SetFileName((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 3: _t->ReadFile((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 4: _t->SetData((*reinterpret_cast< QByteArray(*)>(_a[1]))); break;
-        case 5: _t->SetRouteSavedFile((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 6: _t->ChangingData(); break;
-        case 7: _t->WriteData((*reinterpret_cast< QByteArray(*)>(_a[1]))); break;
-        case 8: _t->ObserverWorkDir(); break;
-        case 9: { QString _r = _t->FindName();
+        case 4: _t->SavePathTargetFile((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 5: { QString _r = _t->GetPathFile();
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
-        case 10: _t->on_activateTimer_clicked(); break;
-        case 11: _t->on_singleStart_clicked(); break;
-        case 12: _t->on_selectRoute_clicked(); break;
-        case 13: _t->on_activateDirTimer_clicked(); break;
+        case 6: _t->CheckNeedDeleteFile(); break;
+        case 7: _t->SetData((*reinterpret_cast< QByteArray(*)>(_a[1]))); break;
+        case 8: _t->SetRouteSavedFile((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 9: _t->ChangingData(); break;
+        case 10: _t->WriteData((*reinterpret_cast< QByteArray(*)>(_a[1]))); break;
+        case 11: _t->ObserverWorkDir(); break;
+        case 12: { QString _r = _t->FindName();
+            if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = _r; }  break;
+        case 13: _t->on_activateTimer_clicked(); break;
+        case 14: _t->on_singleStart_clicked(); break;
+        case 15: _t->on_selectRoute_clicked(); break;
+        case 16: _t->on_activateDirTimer_clicked(); break;
         default: ;
         }
     }
@@ -161,13 +176,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 17)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 17;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 17)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 14;
+        _id -= 17;
     }
     return _id;
 }
