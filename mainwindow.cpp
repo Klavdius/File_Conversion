@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     tmr = new QTimer(this);
     tmrDir = new QTimer(this);
-
+    SetRouteSavedFile("./");
     SetWorkDir(QDir::currentPath());
 }
 
@@ -22,7 +22,7 @@ void MainWindow::on_loadFile_clicked()
 {
     QString path;
     path = QFileDialog::getOpenFileName(this,tr("Open file"),"../","*.txt *.bin",0);
-
+    SavePathTargetFile(path);
     ReadFile(path);
 }
 
@@ -40,10 +40,8 @@ void MainWindow::ReadFile(QString path)
     QByteArray data;
     data = file.readAll();
 
-    if(ui->deleteFile->isChecked()){
-        file.remove();
-    }
 
+    file.close();
     SetData(data);
 }
 
@@ -142,9 +140,28 @@ void MainWindow::SetRouteSavedFile(QString dir){
     routeDir = dir;
 }
 
+
 void MainWindow::on_singleStart_clicked()
 {
     ChangingData();
+    CheckNeedDeleteFile();
+}
+
+void MainWindow::SavePathTargetFile(QString path){
+    pathTargetFile = path;
+}
+
+void MainWindow::CheckNeedDeleteFile(){
+    if(ui->deleteFile->isChecked()){
+        QFile deleteFile(GetPathFile());
+        deleteFile.open(QIODevice::ReadOnly);
+        deleteFile.remove();
+    }
+
+}
+
+QString MainWindow::GetPathFile(){
+    return pathTargetFile;
 }
 
 void MainWindow::SetFileName(QString name)
